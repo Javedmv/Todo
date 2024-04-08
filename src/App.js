@@ -36,7 +36,9 @@ function App(){
                     <p>{list.text}</p>
                   </div>
                   <div className="right">
-                    <i className="fas fa-times"></i>
+                    <i onClick={(e) => {
+                      setToDos(toDos.filter((obj) => obj.id !== list.id));
+                    }} className="fas fa-times"></i>
                   </div>
                   </div>
                 )
